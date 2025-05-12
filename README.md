@@ -97,15 +97,15 @@ self.model.load_state_dict(torch.load(directory,map_location=torch.device('cpu')
 - Run the pipeline using the following commands:
 
 ```shell
-# 去除序列中的"*"和"X"字符
+# Clean sequences by removing invalid characters like "*" and "X"
 bash run.1.clean.sh
-# 分割序列
+# Split sequences for parallel processing
 bash run.2.split.sh
-# 获得运行命令 run.4.all.sh
+# Generate commands for execution
 bash run.3.get_all.sh
-# 多线程运行
+# Execute in parallel
 bash run.5.paralleltask.sh
-# 合并和统计结果
+# Merge and analyze results
 python run.6.merge.py
 python run.7.stat.py 0.5
 python run.7.stat.py 0.8
